@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix Your Urges | Self Control Hub</title>
+  <meta name="description" content="Stop urges like procrastination, anger, cravings, and social media addiction with breathing exercises, streak tracking, and self-control tools.">
+  <meta name="keywords" content="stop urges, self control, nofap, procrastination cure, anger management, quit cravings, mindfulness, discipline, resist temptation">
+  <meta name="author" content="Self Control Hub">
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:title" content="Fix Your Urges | Self Control Hub">
+  <meta property="og:description" content="Beat procrastination, cravings, and urges with science-backed tools. Build streaks, try breathing exercises, and strengthen your self-control.">
+  <meta property="og:url" content="https://selfcontrolhub.com">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://selfcontrolhub.com/logo.png">
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How can I stop my urges?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can stop urges by using breathing exercises, streak tracking, and replacing urges with positive actions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this really work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, many people successfully reduce urges using mindfulness, physical replacement actions, and consistent streak tracking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Self Control Hub is completely free and works directly in your browser."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://selfcontrolhub.com"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(to bottom right, #a7d9f7, #e1f5fe);
+      color: #2c3e50;
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
+    h1 { color: #1a5276; margin-bottom: 10px; }
+    p { font-size: 18px; margin-bottom: 20px; }
+    select, button {
+      padding: 12px 18px;
+      margin: 10px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    select { border: 1px solid #ccc; }
+    button { background: #3498db; color: white; font-weight: bold; }
+    button:hover { transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    #response {
+      margin-top: 20px;
+      padding: 20px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #breathingCircle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #6ab7ff, #3498db);
+      margin: 20px auto;
+      transition: all 4s ease-in-out;
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
+    #breathingText {
+      font-size: 22px;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #1a5276;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Fix Your Urges ✨</h1>
+  <p>Choose the urge you're struggling with right now:</p>
+
+  <select id="urge">
+    <option value="">-- Select Urge --</option>
+    <option value="anger">Anger</option>
+    <option value="procrastination">Procrastination</option>
+    <option value="craving">Craving (Food/Smoking/Other)</option>
+    <option value="stress">Stress</option>
+    <option value="social">Social Media Addiction</option>
+  </select>
+  <button onclick="fixUrge()">Fix It</button>
+
+  <div id="response"></div>
+
+  <h2>🌬️ Breathing Exercise</h2>
+  <button onclick="startBreathing()">Start Breathing</button>
+  <button onclick="stopBreathing()">Stop Breathing</button>
+  <div id="breathingCircle"></div>
+  <div id="breathingText"></div>
+
+  <h2>🚫 Stop the Urge</h2>
+  <button onclick="stopUrge()">I Won’t Give In!</button>
+  <div id="urgeMessage"></div>
+  <div id="streak"></div>
+
+  <h2>🕒 Future Self Reminder</h2>
+  <button onclick="futureSelf()">See My Future</button>
+  <div id="futureBox"></div>
+
+  <!-- FAQ Section -->
+  <h2>❓ Frequently Asked Questions</h2>
+  <div id="faq">
+    <h3>How can I stop my urges?</h3>
+    <p>You can stop urges by doing deep breathing, taking a short walk, or replacing them with healthier actions.</p>
+
+    <h3>Does this really work?</h3>
+    <p>Yes, thousands of people beat procrastination, cravings, and other urges by using simple daily self-control practices.</p>
+
+    <h3>Is this free to use?</h3>
+    <p>Yes, everything here is 100% free and works instantly in your browser.</p>
+  </div>
+
+  <footer>
+    <p>© 2025 Self Control Hub | Built to help you stay in control 🚀</p>
+  </footer>
+
+<script>
+  function fixUrge() {
+    const urge = document.getElementById("urge").value;
+    const responseBox = document.getElementById("response");
+    
+    let responses = {
+      anger: [
+        "Take 3 deep breaths. Step away before reacting.",
+        "Write down what you feel instead of shouting.",
+        "Drink a glass of water and wait 2 minutes."
+      ],
+      procrastination: [
+        "Start with just 2 minutes of work – momentum will build.",
+        "Break the task into a tiny step and finish it now.",
+        "Imagine how relieved you'll feel once it's done."
+      ],
+      craving: [
+        "Drink water and wait 5 minutes – cravings fade.",
+        "Distract yourself with a short walk or music.",
+        "Remind yourself: 'One urge doesn't control me.'"
+      ],
+      stress: [
+        "Close your eyes and inhale deeply for 5 seconds.",
+        "Stretch your arms and shoulders for 30 seconds.",
+        "Write down what's stressing you and tackle one thing."
+      ],
+      social: [
+        "Lock your phone for 15 minutes and do something offline.",
+        "Replace scrolling with reading a page of a book.",
+        "Remember: Social media is endless, your time is not."
+      ]
+    };
+
+    if(responses[urge]) {
+      let tip = responses[urge][Math.floor(Math.random() * responses[urge].length)];
+      responseBox.innerHTML = `<h2>💡 Tip for You:</h2><p>${tip}</p>`;
+    } else {
+      responseBox.innerHTML = "<p>Please select an urge first.</p>";
+    }
+  }
+
+  // Breathing Exercise
+  let breathingTimeout;
+  let isBreathing = false;
+
+  function startBreathing() {
+    if (isBreathing) return;
+    isBreathing = true;
+
+    const circle = document.getElementById("breathingCircle");
+    const text = document.getElementById("breathingText");
+
+    let steps = [
+      {action: "Inhale", time: 4000, size: "250px"},
+      {action: "Hold", time: 7000, size: "250px"},
+      {action: "Exhale", time: 8000, size: "150px"}
+    ];
+
+    let index = 0;
+
+    function nextStep() {
+      if (!isBreathing) return;
+      let step = steps[index];
+      text.innerText = step.action;
+      circle.style.width = step.size;
+      circle.style.height = step.size;
+
+      breathingTimeout = setTimeout(() => {
+        index = (index + 1) % steps.length;
+        nextStep();
+      }, step.time);
+    }
+
+    nextStep();
+  }
+
+  function stopBreathing() {
+    isBreathing = false;
+    clearTimeout(breathingTimeout);
+    document.getElementById("breathingText").innerText = "Stopped";
+    const circle = document.getElementById("breathingCircle");
+    circle.style.width = "150px";
+    circle.style.height = "150px";
+  }
+
+  // Urge Stopper
+  let streakCount = localStorage.getItem("urgeStreak") ? parseInt(localStorage.getItem("urgeStreak")) : 0;
+  document.getElementById("streak").innerText = "🔥 Your streak: " + streakCount + " urges resisted";
+
+  function stopUrge() {
+    const msgBox = document.getElementById("urgeMessage");
+    msgBox.innerHTML = "<h3>⏳ Hold on! Breathe with me for 10 seconds...</h3>";
+    startBreathing();
+    setTimeout(() => {
+      streakCount++;
+      localStorage.setItem("urgeStreak", streakCount);
+
+      let replacements = [
+        "Do 20 push-ups 💪",
+        "Drink a glass of cold water 🥶",
+        "Take a 2-minute walk 🚶",
+        "Write one sentence in a journal ✍️",
+        "Stretch your body for 30 seconds 🤸"
+      ];
+      let replacement = replacements[Math.floor(Math.random() * replacements.length)];
+
+      msgBox.innerHTML = `
+        <h3>👏 You resisted the urge!</h3>
+        <p>${replacement}</p>
+        <p>🔥 Streak: ${streakCount} urges resisted</p>
+      `;
+      stopBreathing();
+    }, 10000);
+  }
+
+  // Future Self
+  function futureSelf() {
+    const box = document.getElementById("futureBox");
+    box.innerHTML = `
+      <div style="background:white; padding:20px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.15); max-width:500px; margin:20px auto;">
+        <h3>Imagine yourself 5 minutes from now...</h3>
+        <div style="display:flex; justify-content:space-between; gap:15px; margin-top:20px;">
+          <div style="flex:1; background:#f8d7da; padding:15px; border-radius:10px;">
+            <h4>❌ If you give in</h4>
+            <p>😞 You’ll feel guilty, drained, and disappointed.</p>
+            <p>⏳ The urge will return again, stronger.</p>
+          </div>
+          <div style="flex:1; background:#d4edda; padding:15px; border-radius:10px;">
+            <h4>✅ If you resist</h4>
+            <p>🔥 You’ll feel proud, strong, and in control.</p>
+            <p>💪 Your streak grows. Your future self thanks you.</p>
+          </div>
+        </div>
+        <p style="margin-top:15px; font-weight:bold;">👉 Choose your future wisely.</p>
+      </div>
+    `;
+  }
+</script>
+</body>
+</html>
+
+<h2>📝Best Ways to inprove selfcontrol</h2>
+<ul>
+  <li><a href="blog1.html">How to Build Self-Control and Stop Urges</a></li>
+  <!-- Later you’ll add blog2.html, blog3.html etc. -->
+</ul>
