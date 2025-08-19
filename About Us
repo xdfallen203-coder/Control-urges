@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Self Discipline Hub</title>
+  <meta name="description" content="Learn more about Self Discipline Hub, our mission to help people build self control, overcome urges, and live a focused and productive life.">
+  <meta name="keywords" content="about self discipline, nofap, willpower, self improvement mission, personal growth, how to be motivated, self improvement, gym workout plan">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+      background: #f8f9fa;
+      color: #333;
+    }
+    header {
+      background: #2b6777;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #2b6777;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    .btn-home {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: #2b6777;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .btn-home:hover {
+      background: #225a65;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About Us</h1>
+    <p>Building Self Control, Focus, and Discipline for a Better Life</p>
+  </header>
+  
+  <main>
+    <h2>Who We Are</h2>
+    <p>Welcome to <strong>Self Discipline Hub</strong> – a platform dedicated to helping individuals build mental strength, self-control, and discipline. Our mission is to provide practical guides, scientifically backed strategies, and motivational content that empowers people to take charge of their habits, overcome destructive urges, and live a life filled with purpose and productivity.</p>
+
+    <h2>Our Mission</h2>
+    <p>In today’s digital age, distractions like <strong>social media addiction, procrastination, and instant gratification</strong> are everywhere. We aim to guide our readers with tools and actionable advice to:</p>
+    <ul>
+      <li>Overcome urges and stay consistent with their goals</li>
+      <li>Develop strong willpower and focus</li>
+      <li>Build long-term habits that lead to success</li>
+      <li>Embrace challenges like <em>NoFap, Semen Retention, Dopamine Detox</em></li>
+      <li>Stay disciplined through workouts, routines, and self-reflection</li>
+    </ul>
+
+    <h2>Why This Matters</h2>
+    <p>We believe that discipline is the key to freedom. By mastering self-control, you gain clarity, strength, and the ability to achieve more in life – whether it’s in your career, studies, relationships, or personal growth. Every blog post we create is written with quality, research, and value in mind to ensure you leave with something actionable and motivating.</p>
+
+    <h2>Join the Journey</h2>
+    <p>This website is not just about information – it’s about transformation. If you’ve ever struggled with procrastination, lack of motivation, or urges that derail your progress, you’re not alone. Together, we can build a stronger, more disciplined version of ourselves.</p>
+
+    <a href="/" class="btn-home">🏠 Back to Home</a>
+  </main>
+</body>
+</html>
