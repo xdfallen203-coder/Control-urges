@@ -1,0 +1,13 @@
+# robots.txt for https://www.selfcontrolhub.com/
+
+User-agent: *
+Allow: /
+
+# Block private/system folders
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.selfcontrolhub.com/sitemap.xml
